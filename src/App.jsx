@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import CardList from './components/CardList';
 import SingleView from './components/SingleView';
@@ -9,7 +9,7 @@ import { CartProvider } from './state/CartProvider';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="App">
         <CartProvider>
           <Header />
@@ -21,7 +21,7 @@ function App() {
           </Routes>
         </CartProvider>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
